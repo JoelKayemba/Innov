@@ -14,5 +14,18 @@ namespace InnovAPK
         {
             InitializeComponent();
         }
+        private async void OnInscriptionTapped(object sender, EventArgs e)
+        {
+            // Naviguer vers la page d'inscription
+            await Navigation.PushAsync(new PageInscription());
+        }
+
+        private async void OnMotDePasseOublieTapped(object sender, EventArgs e)
+        {
+            // Afficher une boîte de dialogue pour la récupération du mot de passe
+            await DisplayAlert("Mot de passe oublié", "Veuillez saisir votre adresse e-mail pour la récupération du mot de passe.", "OK");
+            // Naviguer vers la page d'inscription
+            await Navigation.PushAsync(new PageMotDePasseOublié());
+        }
     }
 }

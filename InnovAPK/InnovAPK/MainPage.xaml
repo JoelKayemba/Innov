@@ -3,22 +3,43 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="InnovAPK.MainPage">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-    </StackLayout>
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="InnovConnect est une plateforme numérique révolutionnaire qui connecte les jeunes talents africains avec des opportunités d'investissement, de collaboration et de développement de projets innovants." 
+               HorizontalOptions="CenterAndExpand" 
+               FontSize="Medium" TextColor="Black" 
+               Margin="20,20,20,0"  FontAttributes="Italic"/>
+
+            <Label Text="Bienvenue sur InnovConnect !" 
+                   HorizontalOptions="CenterAndExpand" 
+                   VerticalOptions="CenterAndExpand" 
+                   FontSize="Large" 
+                   FontAttributes="Bold"
+                   FontFamily="Arial"/>
+
+            <!-- Formulaire de connexion -->
+            <Entry Placeholder="Nom d'utilisateur" />
+            <Entry Placeholder="Mot de passe" IsPassword="True" />
+            <Button Text="Se connecter" />
+
+            <!-- Liens vers l'inscription et la récupération du mot de passe -->
+            <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
+                <Label Text="Pas encore de compte ? " />
+                <Label Text="Inscrivez-vous" TextColor="Blue">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnInscriptionTapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <Label Text="Mot de passe oublié" TextColor="Blue">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnMotDePasseOublieTapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+
 
 </ContentPage>
