@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InnovAPK.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace InnovAPK
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new ConnexionPage();
         }
 
         protected override void OnStart()

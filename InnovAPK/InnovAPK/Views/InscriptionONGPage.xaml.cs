@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace InnovAPK
+namespace InnovAPK.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PageInscription : ContentPage
+    public partial class InscriptionONGPage : ContentPage
     {
-        public PageInscription()
+        public InscriptionONGPage()
         {
             InitializeComponent();
         }

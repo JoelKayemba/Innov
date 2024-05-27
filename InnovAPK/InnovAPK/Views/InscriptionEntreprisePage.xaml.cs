@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace InnovAPK
+namespace InnovAPK.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PageMotDePasseOublié : ContentPage
+    public partial class InscriptionEntreprisePage : ContentPage
     {
-        public PageMotDePasseOublié()
+        public InscriptionEntreprisePage()
         {
             InitializeComponent();
         }

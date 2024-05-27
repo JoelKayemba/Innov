@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:InnovAPK.Views"
+             x:Class="InnovAPK.Views.ConnexionPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="50">
+            <Frame CornerRadius="200" HeightRequest="244" WidthRequest="244" HorizontalOptions="Center" BackgroundColor="#5D4242">
+                <StackLayout>
+                    <Image Source="IconUser" HeightRequest="100" WidthRequest="100" VerticalOptions="Center" HorizontalOptions="Center"/>
+                </StackLayout>
+            </Frame>
+            <Entry Placeholder="Username" Margin="0,20,0,0">
+                <Entry.Behaviors>
+                    <local:IconBehavior Icon="user-line.png"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Entry Placeholder="Password" IsPassword="True" Margin="0,20,0,0">
+                <Entry.Behaviors>
+                    <local:IconBehavior Icon="lock-line.png"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Button Text="LOG IN" BackgroundColor="#5D4242" TextColor="White" CornerRadius="20" Margin="0,20,0,0"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
+                <Label Text="Log up " VerticalOptions="Center" />
+                <Label Text="↓" VerticalOptions="Center"/> <!--Une icône à la place-->
+                <Label Text="Forget Password?" VerticalOptions="Center" Padding="100,0,0,0"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
