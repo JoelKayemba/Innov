@@ -11,7 +11,7 @@ namespace InnovAPK
         {
             InitializeComponent();
 
-            MainPage = new ConnexionPage();
+            MainPage = new InscriptionONGPage();
         }
 
         protected override void OnStart()
