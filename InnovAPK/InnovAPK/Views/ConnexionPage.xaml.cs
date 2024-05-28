@@ -15,6 +15,7 @@ namespace InnovAPK.Views
         public ConnexionPage()
         {
             InitializeComponent();
+            
         }
     }
 }
