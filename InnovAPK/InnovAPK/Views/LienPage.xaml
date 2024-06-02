@@ -23,7 +23,7 @@
                                 <Image Source="search_icon.png" WidthRequest="30" HeightRequest="30" VerticalOptions="Center"/>
                                 <SearchBar Placeholder="Recherche" TextColor="White" PlaceholderColor="White" BackgroundColor="Transparent" VerticalOptions="Center"/>
                             </StackLayout>
-                        </Frame>
+                    </Frame>
 
                         <ScrollView Grid.Row="1">
 
@@ -41,8 +41,8 @@
 
 
                         </ScrollView>
-
-                    </StackLayout>
+                  
+                </StackLayout>
                 </ScrollView>
 
                 <!-- Footer -->
