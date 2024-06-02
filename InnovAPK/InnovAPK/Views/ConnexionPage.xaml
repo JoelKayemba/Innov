@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:InnovAPK.Views"
-             x:Class="InnovAPK.Views.ConnexionPage">
+             x:Class="InnovAPK.Views.ConnexionPage"
+             BackgroundColor="#E1CCCC">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="50">
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="50" >
             <Frame CornerRadius="200" HeightRequest="244" WidthRequest="244" HorizontalOptions="Center" BackgroundColor="#5D4242">
                 <StackLayout>
                     <Image Source="IconUser" HeightRequest="100" WidthRequest="100" VerticalOptions="Center" HorizontalOptions="Center"/>
