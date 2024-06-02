@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             x:Class="InnovAPK.Views.LienPage">
+    
+        <ContentPage.Content>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <StackLayout Padding="20" Spacing="20" Grid.Row="0">
+                    <Label Text="LIENS" FontSize="32" FontAttributes="Bold" HorizontalOptions="Start" Margin="0,40,0,0"/>
+                </StackLayout>
+
+                <ScrollView Grid.Row="1">
+                <StackLayout Padding="20,0" Spacing="20">
+                    <Frame x:Name="searchBarFrame" CornerRadius="20" BackgroundColor="#805A5A" Padding="0" Grid.Row="0">
+                            <StackLayout Orientation="Horizontal" Padding="0">
+                                <Image Source="search_icon.png" WidthRequest="30" HeightRequest="30" VerticalOptions="Center"/>
+                                <SearchBar Placeholder="Recherche" TextColor="White" PlaceholderColor="White" BackgroundColor="Transparent" VerticalOptions="Center"/>
+                            </StackLayout>
+                        </Frame>
+
+                        <ScrollView Grid.Row="1">
+
+                            <Frame CornerRadius="10" Padding="10" HasShadow="True">
+                                <StackLayout>
+                                    <Label Text="NomEntreprise1" FontAttributes="Bold" />
+                                    <Label Text="https://teams.live.com/meet/9362294053046?p=UabkVXulvIfs6BUvAV" FontSize="Small"/>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                        <Label Text="AAAA MM JJ" HorizontalOptions="FillAndExpand"/>
+                                        <Label Text="HH:MM" HorizontalOptions="FillAndExpand"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                           
+
+
+                        </ScrollView>
+
+                    </StackLayout>
+                </ScrollView>
+
+                <!-- Footer -->
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="#261D1D" Grid.Row="2" Padding="0" HeightRequest="101">
+                    <Image Source="arrow-down-s-line.png" WidthRequest="40" HeightRequest="40" HorizontalOptions="CenterAndExpand"/>
+                    <Image Source="chat_icon.png" WidthRequest="40" HeightRequest="40" HorizontalOptions="CenterAndExpand"/>
+                    <Image Source="add_icon.png" WidthRequest="40" HeightRequest="40" HorizontalOptions="CenterAndExpand"/>
+                    <Image Source="attach_icon.png" WidthRequest="40" HeightRequest="40" HorizontalOptions="CenterAndExpand"/>
+                    <Image Source="settings_icon.png" WidthRequest="40" HeightRequest="40" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </Grid>
+        </ContentPage.Content>
+    
+</ContentPage>
