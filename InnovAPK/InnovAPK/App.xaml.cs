@@ -11,7 +11,7 @@ namespace InnovAPK
         {
             InitializeComponent();
 
-            MainPage = new TransitionPage();
+            MainPage = new InscriptionEntreprisePage();
         }
 
         protected override void OnStart()

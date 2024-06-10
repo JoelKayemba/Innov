@@ -11,20 +11,20 @@
                     <Image Source="IconUser" HeightRequest="100" WidthRequest="100" VerticalOptions="Center" HorizontalOptions="Center"/>
                 </StackLayout>
             </Frame>
-            <Entry Placeholder="Username" Margin="0,20,0,0">
+            <Entry Placeholder="Nom d'utilisation" Margin="0,20,0,0">
                 <Entry.Behaviors>
                     <local:IconBehavior Icon="user-line.png"/>
                 </Entry.Behaviors>
             </Entry>
-            <Entry Placeholder="Password" IsPassword="True" Margin="0,20,0,0">
+            <Entry Placeholder="Mot de passe" IsPassword="True" Margin="0,20,0,0">
                 <Entry.Behaviors>
                     <local:IconBehavior Icon="lock-line.png"/>
                 </Entry.Behaviors>
             </Entry>
-            <Button Text="LOG IN" BackgroundColor="#5D4242" TextColor="White" CornerRadius="20" Margin="0,20,0,0"/>
+            <Button Text="Se connecter" BackgroundColor="#5D4242" TextColor="White" CornerRadius="20" Margin="0,20,0,0"/>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
-                <Label Text="Log up " VerticalOptions="Center" Padding="0,0,-11,0"/>
-                <Label Text="Forget Password?" VerticalOptions="Center" Padding="90,0,0,0"/>
+                <Label Text="S'inscrire " VerticalOptions="Center" Padding="0,0,-11,0"/>
+                <Label Text="Mot de passe oublier?" VerticalOptions="Center" Padding="90,0,0,0"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
