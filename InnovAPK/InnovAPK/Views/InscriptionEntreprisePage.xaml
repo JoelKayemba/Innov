@@ -3,16 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:InnovAPK.Views"
              x:Class="InnovAPK.Views.InscriptionEntreprisePage"
-             BackgroundColor="#E1CCCC">
+             BackgroundColor="#E1CCCC"
+                xmlns:viewModel="clr-namespace:InnovAPK.ViewsModels"
+BindingContext="{Binding Source={x:Static viewModel:EntrepriseViewModel.Instance}}"
+>
+    
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="30">
             <Label Text="Informations de base" FontSize="32" FontAttributes="Bold" HorizontalOptions="Center" />
-            <Entry Placeholder="Nom de l'entreprise" Margin="0,10,0,0">
+            <Entry Placeholder="Nom de l'entreprise" Margin="0,10,0,0" Text="{Binding Entreprise.Nom}">
                 <Entry.Behaviors>
                     <local:IconBehavior Icon=""/>
                 </Entry.Behaviors>
             </Entry>
-            <Picker Title="Type d'entreprise" x:Name="CompanyTypePicker">
+            <Picker Title="Type d'entreprise" x:Name="CompanyTypePicker" SelectedItem="{Binding Entreprise.Type, Mode=TwoWay}" >
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>SARL</x:String>
@@ -24,7 +28,7 @@
             </Picker>
 
             <!-- Secteur d'activité -->
-            <Picker Title="Secteur d'activité" x:Name="SectorPicker">
+            <Picker Title="Secteur d'activité" x:Name="SectorPicker" SelectedItem="{Binding Entreprise.SecteurActivite, Mode=TwoWay}" >
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>Technologie</x:String>
@@ -37,14 +41,13 @@
             </Picker>
 
             <!-- Adresse e-mail -->
-            <Entry Placeholder="Adresse e-mail" x:Name="EmailEntry" Keyboard="Email" />
+            <Entry Placeholder="Adresse e-mail" x:Name="EmailEntry" Keyboard="Email"  Text="{Binding Entreprise.Email}" />
 
-            <!-- Numéro de téléphone -->
-            <Entry Placeholder="Numéro de téléphone" x:Name="PhoneNumberEntry" Keyboard="Telephone" />
+           
 
             <!-- Site Web -->
-            <Entry Placeholder="Site Web" x:Name="WebsiteEntry" Keyboard="Url" />
-            <Button Text="S'inscrire" BackgroundColor="#5D4242" TextColor="White" CornerRadius="20" Margin="0,10,0,0"/>
+            <Entry Placeholder="Site Web" x:Name="WebsiteEntry" Keyboard="Url" Text="{Binding Entreprise.SiteWeb}" />
+            <Button Text="S'inscrire" BackgroundColor="#5D4242" TextColor="White" CornerRadius="20" Margin="0,10,0,0" Command="{Binding RegisterCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

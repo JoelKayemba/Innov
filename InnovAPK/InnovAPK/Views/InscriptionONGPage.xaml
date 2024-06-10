@@ -3,49 +3,52 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               xmlns:local="clr-namespace:InnovAPK.Views"
              x:Class="InnovAPK.Views.InscriptionONGPage"
-             BackgroundColor="#E1CCCC">
+             BackgroundColor="#E1CCCC"
+                xmlns:viewModel="clr-namespace:InnovAPK.ViewsModels"
+        BindingContext="{Binding Source={x:Static viewModel:ONGViewModel.Instance}}">
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="30">
 
             <Frame CornerRadius="100" HeightRequest="150" WidthRequest="150" HorizontalOptions="Center" BackgroundColor="#5D4242" Margin="20">
                 <Image Source="user_icon.png" HeightRequest="100" WidthRequest="100" VerticalOptions="Center" HorizontalOptions="Center"/>
             </Frame>
-            <Entry Placeholder="Nom de l'ONG" Margin="0,10,0,0">
+            <Entry Placeholder="Nom de l'ONG" Margin="0,10,0,0" Text="{Binding ONG.Nom}">
                 <Entry.Behaviors>
                     <local:IconBehavior Icon=""/>
                 </Entry.Behaviors>
             </Entry>
-            <Entry Placeholder="Type d'ONG" Margin="0,10,0,0">
+            <Picker Title="Type d'ONG" x:Name="CompanyTypePicker" SelectedItem="{Binding ONG.Type}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>SARL</x:String>
+                        <x:String>SA</x:String>
+                        <x:String>SAS</x:String>
+                        <x:String>Autre</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Entry Placeholder="Adresse" Margin="0,10,0,0" Text="{Binding ONG.Adresse}">
                 <Entry.Behaviors>
                     <local:IconBehavior Icon=""/>
                 </Entry.Behaviors>
             </Entry>
-            <Entry Placeholder="Adresse" Margin="0,10,0,0">
+            <Entry Placeholder="Email" Margin="0,10,0,0" Text="{Binding ONG.Email}">
                 <Entry.Behaviors>
                     <local:IconBehavior Icon=""/>
                 </Entry.Behaviors>
             </Entry>
-            <Entry Placeholder="Email" Margin="0,10,0,0">
+           
+            <Entry Placeholder="Password" IsPassword="True" Margin="0,10,0,0" Text="{Binding ONG.MotDePasse}">
                 <Entry.Behaviors>
                     <local:IconBehavior Icon=""/>
                 </Entry.Behaviors>
             </Entry>
-            <Entry Placeholder="Username" Margin="0,10,0,0">
+            <Entry Placeholder="Confirmation password" IsPassword="True" Margin="0,10,0,0" Text="{Binding ONG.ConfirmationMotDePasse}">
                 <Entry.Behaviors>
                     <local:IconBehavior Icon=""/>
                 </Entry.Behaviors>
             </Entry>
-            <Entry Placeholder="Password" IsPassword="True" Margin="0,10,0,0">
-                <Entry.Behaviors>
-                    <local:IconBehavior Icon=""/>
-                </Entry.Behaviors>
-            </Entry>
-            <Entry Placeholder="Confirmation password" IsPassword="True" Margin="0,10,0,0">
-                <Entry.Behaviors>
-                    <local:IconBehavior Icon=""/>
-                </Entry.Behaviors>
-            </Entry>
-            <Button Text="REGISTER" BackgroundColor="#5D4242" TextColor="White" CornerRadius="20" Margin="0,10,0,0"/>
+            <Button Text="REGISTER" BackgroundColor="#5D4242" TextColor="White" CornerRadius="20" Margin="0,10,0,0" Command="{Binding RegisterCommand}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
