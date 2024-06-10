@@ -24,13 +24,6 @@
             <Button Text="LOG IN" BackgroundColor="#5D4242" TextColor="White" CornerRadius="20" Margin="0,20,0,0"/>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
                 <Label Text="Log up " VerticalOptions="Center" Padding="0,0,-11,0"/>
-                <Picker x:Name="logupPicker" Title="↓" VerticalOptions="Center" WidthRequest="20" >
-                    <Picker.Items>
-                        <x:String>Entreprise</x:String>
-                        <x:String>Innovateur</x:String>
-                        <x:String>ONG</x:String>
-                    </Picker.Items>
-                </Picker>
                 <Label Text="Forget Password?" VerticalOptions="Center" Padding="90,0,0,0"/>
             </StackLayout>
         </StackLayout>
