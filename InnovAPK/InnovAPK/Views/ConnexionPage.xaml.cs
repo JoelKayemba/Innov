@@ -17,5 +17,9 @@ namespace InnovAPK.Views
             InitializeComponent();
             
         }
+        private async void OnSignUpTapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new TransitionPage());
+        }
     }
 }

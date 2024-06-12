@@ -23,7 +23,11 @@
             </Entry>
             <Button Text="Se connecter" BackgroundColor="#5D4242" TextColor="White" CornerRadius="20" Margin="0,20,0,0"/>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
-                <Label Text="S'inscrire " VerticalOptions="Center" Padding="0,0,-11,0"/>
+                <Label Text="S'inscrire " VerticalOptions="Center" Padding="0,0,-11,0">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSignUpTapped" />
+                    </Label.GestureRecognizers>
+                </Label>
                 <Label Text="Mot de passe oublier?" VerticalOptions="Center" Padding="90,0,0,0"/>
             </StackLayout>
         </StackLayout>

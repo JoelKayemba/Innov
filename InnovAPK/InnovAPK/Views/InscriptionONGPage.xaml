@@ -20,10 +20,15 @@
             <Picker Title="Type d'ONG" x:Name="CompanyTypePicker" SelectedItem="{Binding ONG.Type}">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
-                        <x:String>SARL</x:String>
-                        <x:String>SA</x:String>
-                        <x:String>SAS</x:String>
-                        <x:String>Autre</x:String>
+                        <x:String>Développement</x:String>
+                        <x:String>Santé</x:String>
+                        <x:String>Environnement</x:String>
+                        <x:String>Droit de l'homme</x:String>
+                        <x:String>Humanitaire</x:String>
+                        <x:String>Education</x:String>
+                        <x:String>Défense des animaux</x:String>
+                        <x:String>Promotion de la paix</x:String>
+                        <x:String>Recherche et plaidoyer</x:String>
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>

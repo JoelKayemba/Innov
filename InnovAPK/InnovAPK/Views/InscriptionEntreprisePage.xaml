@@ -47,6 +47,19 @@ BindingContext="{Binding Source={x:Static viewModel:EntrepriseViewModel.Instance
 
             <!-- Site Web -->
             <Entry Placeholder="Site Web" x:Name="WebsiteEntry" Keyboard="Url" Text="{Binding Entreprise.SiteWeb}" />
+            
+            <!-- Mot de passe-->
+
+            <Entry Placeholder="Password" IsPassword="True" Margin="0,10,0,0"  Text="{Binding Entreprise.MotDePasse}"  >
+                <Entry.Behaviors>
+                    <local:IconBehavior Icon=""/>
+                </Entry.Behaviors>
+            </Entry>
+            <Entry Placeholder="Confirmation password" IsPassword="True" Margin="0,10,0,0"  Text="{Binding Entreprise.ConfirmationMotDePasse}"  >
+                <Entry.Behaviors>
+                    <local:IconBehavior Icon=""/>
+                </Entry.Behaviors>
+            </Entry>
             <Button Text="S'inscrire" BackgroundColor="#5D4242" TextColor="White" CornerRadius="20" Margin="0,10,0,0" Command="{Binding RegisterCommand}"/>
         </StackLayout>
     </ContentPage.Content>
