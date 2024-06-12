@@ -19,8 +19,8 @@ namespace InnovAPK
 
         protected override void OnStart()
         {
-            AppCenter.Start("{Your app secret here}",
-                   typeof(Analytics), typeof(Crashes));
+            AppCenter.Start("ios={Your iOS App secret};android={Your Android App secret}",
+              typeof(Analytics), typeof(Crashes));
         }
 
         protected override void OnSleep()
